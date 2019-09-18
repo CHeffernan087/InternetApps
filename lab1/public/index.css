@@ -1,0 +1,29 @@
+#counterWrapper{
+    height:100vh;
+    width:100vw;
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left:auto;
+    display: flex;
+}
+
+.counter{
+    height: 200px;
+    width:200px;
+    align-self: center;
+    margin:auto;
+    display: flex;
+    border-radius:100%;
+    border: 2.5px solid black;
+    box-shadow: 3px 3px 8px 3px #888888;
+    
+}
+
+.counterText{
+    font-size: 5em;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    color:#eb0028
+}
