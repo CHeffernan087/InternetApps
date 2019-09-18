@@ -1,6 +1,6 @@
 
 
- const confirmRestart = () => {
+ const confirmRestart = (start) => {
     Swal.fire({
         title: 'Finished!',
         text: 'Do you want to count again?',
@@ -10,7 +10,7 @@
         cancelButtonText: 'No, stop!',
       }).then((result) =>{
           if(result.value){
-              recursivePrint(35)
+              recursivePrint(start)
           }
         })
  }
@@ -21,15 +21,15 @@
 
  }
 
- const recursivePrint = (num) => {
+ const recursivePrint = (num , start = num) => {
      wait().then(() => {
          console.log(num );
          document.getElementById("counter").innerHTML = num;
          if(num > 0 ){
-             return recursivePrint(num-1)
+             return recursivePrint(num-1, start)
          }
          else{
-            confirmRestart()
+            confirmRestart(start)
          }
      })
  }
@@ -47,4 +47,4 @@
 
 
 //printList(35);
-recursivePrint(35);
+recursivePrint(25);
